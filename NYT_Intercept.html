@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYT Quick Links</title>
+    <title>Not The New York Times</title>
     <style>
+        @font-face {
+            font-family: 'Engravers Old English BT';
+            src: url('engravers-old-english-bt.ttf') format('truetype');
+        }
+        
         body {
             margin: 0;
             padding: 0;
@@ -23,11 +28,12 @@
         }
         
         h1 {
+            font-family: 'Engravers Old English BT', Georgia, 'Times New Roman', serif;
             color: #000;
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 50px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-weight: 400;
+            letter-spacing: 2px;
         }
         
         .button-grid {
@@ -80,7 +86,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>The New York Times</h1>
+        <h1>Not The New York Times</h1>
         <div class="button-grid">
             <a href="https://www.nytimes.com/crosswords" class="nyt-button">
                 <img src="games-logo.png" alt="NYT Games" class="button-logo">
@@ -88,7 +94,7 @@
             </a>
             
             <a href="https://cooking.nytimes.com/" class="nyt-button">
-                <img src="cooking.png" alt="NYT Cooking" class="button-logo">
+                <img src="cooking-logo.svg" alt="NYT Cooking" class="button-logo">
                 <span class="button-text">Cooking</span>
             </a>
             
@@ -97,7 +103,7 @@
                 <span class="button-text">The Athletic</span>
             </a>
             
-            <a href="https://www.nytimes.com/#main" class="nyt-button">
+            <a href="https://www.nytimes.com/" class="nyt-button">
                 <img src="nyt.png" alt="NYT" class="button-logo">
                 <span class="button-text">If You Must</span>
             </a>
