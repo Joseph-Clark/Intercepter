@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT Quick Links</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f7f7f7;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #000;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 700px;
+        }
+        
+        .nyt-button {
+            padding: 40px;
+            text-decoration: none;
+            color: #000;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .nyt-button:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .button-logo {
+            width: 100%;
+            max-width: 180px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .button-text {
+            font-size: 1.3em;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+        
+        @media (max-width: 600px) {
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The New York Times</h1>
+        <div class="button-grid">
+            <a href="https://www.nytimes.com/crosswords" class="nyt-button">
+                <img src="games-logo.png" alt="NYT Games" class="button-logo">
+                <span class="button-text">Games</span>
+            </a>
+            
+            <a href="https://cooking.nytimes.com/" class="nyt-button">
+                <img src="cooking.png" alt="NYT Cooking" class="button-logo">
+                <span class="button-text">Cooking</span>
+            </a>
+            
+            <a href="https://www.nytimes.com/athletic/" class="nyt-button">
+                <img src="The_Athletic_app_icon.png" alt="The Athletic" class="button-logo">
+                <span class="button-text">The Athletic</span>
+            </a>
+            
+            <a href="https://www.nytimes.com/#main" class="nyt-button">
+                <img src="nyt.png" alt="NYT" class="button-logo">
+                <span class="button-text">If You Must</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
