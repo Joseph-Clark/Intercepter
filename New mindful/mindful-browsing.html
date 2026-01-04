@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Moment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #2d3748;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #718096;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .site-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .site-item {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .site-item:hover {
+            border-color: #667eea;
+            background: #edf2f7;
+        }
+
+        .site-name {
+            font-size: 18px;
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        .proceed-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .proceed-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+
+        .back-btn {
+            width: 100%;
+            background: #48bb78;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #38a169;
+            transform: translateY(-1px);
+        }
+
+        .breathing {
+            text-align: center;
+            margin-top: 24px;
+            color: #718096;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⏸️ Take a Moment</h1>
+        <p class="subtitle">Do you really want to visit this site right now?</p>
+        
+        <ul class="site-list">
+            <li class="site-item">
+                <span class="site-name">facebook.com</span>
+                <button class="proceed-btn" onclick="proceed('https://facebook.com/#')">Proceed</button>
+            </li>
+            <li class="site-item">
+                <span class="site-name">craigslist.com</span>
+                <button class="proceed-btn" onclick="proceed('https://craigslist.org/#')">Proceed</button>
+            </li>
+            <li class="site-item">
+                <span class="site-name">avclub.com</span>
+                <button class="proceed-btn" onclick="proceed('https://avclub.com/#')">Proceed</button>
+            </li>
+            <li class="site-item">
+                <span class="site-name">pitchfork.com</span>
+                <button class="proceed-btn" onclick="proceed('https://pitchfork.com/#')">Proceed</button>
+            </li>
+        </ul>
+
+        <button class="back-btn" onclick="goBack()">← Go Back</button>
+        
+        <div class="breathing">
+            <p>Take three deep breaths and consider what you really need right now.</p>
+        </div>
+    </div>
+
+    <script>
+        function proceed(url) {
+            window.location.href = url;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
